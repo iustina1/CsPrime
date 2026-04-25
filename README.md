@@ -1,3 +1,44 @@
+CSPRIME – Web Application
+
+CSPRIME is a full-stack web application designed to help computer science students understand how foundational first-year modules connect to advanced topics and real-world applications throughout their degree.
+
+ Overview
+
+Many students struggle to see the long-term value of early computer science concepts. CSPRIME addresses this by providing an interactive platform that highlights how these foundational topics evolve and are applied in later coursework and careers.
+
+The application focuses on improving student awareness, engagement, and understanding through a clean UI and structured content.
+
+ Tech Stack
+Frontend: React.js
+Backend: Node.js, Express.js
+Database: MongoDB
+Tools: Visual Studio Code, Postman
+Features
+User authentication (Login / Sign-up system)
+ Search functionality for modules/topics
+ Interactive module breakdowns
+ Structured navigation across topics and pages
+ FAQ page with study tips and student insights
+ Responsive design for better user experience
+ Key Functionality
+Displays relationships between first-year modules and advanced topics
+Helps students understand real-world applications of core concepts
+Uses a structured backend (MVC architecture) for managing module data
+Provides RESTful API routes (GET, POST, PUT, DELETE)
+
+Project Structure
+The application follows a component-based frontend structure and an MVC backend:
+
+src/ – React components (Modules, Topics, Auth, Navbar, etc.)
+routes/ – API routes
+controllers/ – Business logic
+models/ – Database schemas (MongoDB)
+
+<img width="1366" height="768" alt="Screenshot (29)" src="https://github.com/user-attachments/assets/ebc6ebc9-26d0-4c82-905c-7005dd658407" />
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
