@@ -1,0 +1,229 @@
+import React, { useState } from "react";
+import "./Analytics.css"; // Import the CSS file
+
+const Analytics = () => {
+  const [selectedModule, setSelectedModule] = useState("CS161");
+
+  const moduleData = {
+    CS161: [
+      {
+        code: "CS264",
+        description:
+          "Systems Programmer - Building performance-critical systems, Game Developer - Crafting game engines and mechanics, Research Scientist - Investigating computational methods",
+      },
+      {
+        code: "CS210",
+        description:
+          "Software Developer - Developing backend systems, Android Developer - Creating applications for Android, Research Engineer - Researching Java technologies",
+      },
+    ],
+    CS162: [
+      {
+        code: "CS280",
+        description:
+          "Cybersecurity Analyst - Protecting digital systems, Ethical Hacker - Penetration testing and security analysis",
+      },
+      {
+        code: "CS290",
+        description:
+          "Network Engineer - Designing and maintaining secure networks, Cloud Engineer - Implementing scalable cloud solutions",
+      },
+    ],
+    CS171: [
+      {
+        code: "CS401",
+        description:
+          "Building and improving AI & machine learning systems",
+      },
+      {
+        code: "CS410",
+        description:
+          "Working on image recognition and analysis",
+      },
+      {
+        code: "CS425",
+        description:
+          "Designing and improving audio and speech technology",
+      },
+      {
+        code: "CS416",
+        description:
+          "Enhancing data security and cryptography methods",
+      },
+      {
+        code: "CS423",
+        description:
+          "Developing virtual and augmented reality experiences",
+      },
+      {
+        code: "CS422",
+        description:
+          "Designing robots and automotion systems",
+      },
+    ],
+    CS172: [
+      {
+        code: "CS130",
+        description:
+          "Data Analyst - Leveraging databases for insightful analytics",
+      },
+      {
+        code: "CS370",
+        description:
+          "Reasearch Analyst - Investigating computational complexity and computability",
+      },
+      {
+        code: "CS416",
+        description:
+          "Security Engineer - Focusing on crytography and data protection",
+      },
+    ],
+    MT101SC: [
+      {
+        code: "CS210",
+        description:
+          "Algorithm Developer - Optimizing search and sort techniques",
+      },
+      {
+        code: "CS310",
+        description:
+          "Language Compiler Developer - Implementing programming language compiler",
+      },
+      {
+        code: "CS401",
+        description:
+          "Machine Learning Specialist - Designing algorithms for AI systems.",
+      },
+    ],
+    MT102SC: [
+      {
+        code: "CS370",
+        description:
+          "Complexity Theorist - Analyzing the complexity of algorithms",
+      },
+      {
+        code: "CS401",
+        description:
+          "Data Scientist - Applying machine learning to data analysis",
+      },
+    ],
+    MT113SC: [
+      {
+        code: "CS422",
+        description:
+          "Robotics Engineer - Designing control systems for robots",
+      },
+      {
+        code: "CS426",
+        description:
+          "Graphics Programmer -  Creating 3D models and enviroments",
+      },
+    ],
+  };
+
+  // Skills acquired for each module
+  const skills = {
+    CS161: [
+      "Problem-solving",
+      "Algorithms & Data Structures",
+      "Software Development Principles",
+      "Debugging & Testing",
+    ],
+    CS162: [
+      "Cybersecurity Fundamentals",
+      "Network Security & Encryption",
+      "Ethical Hacking Techniques",
+      "Cloud Security Best Practices",
+    ],
+    CS171: [
+      "Use visual programming tools to create computer systems",
+      "Understand the breadth of topics in computer science",
+      "Solve problems by designing algorithms",
+      "Compose and test programs",
+    ],
+    CS172: [
+      "Application of discrete mathematics techniques to solve computer science problems",
+      "Understanding and implementation of standard proof techniques",
+      "Use of functions to formulate and solve computational problems",
+      "Understanding and implementation of recursion in problem-solving",
+      "Programming using Processing for computer systems applications",
+      "Application of First Order Logic and proof strategies for reasoning about programs",
+    ],
+    MT101SC: [
+      "Understanding of Differential Calculus in One Real Variable",
+      "Knowledge of Sets and Functions",
+      "Derivatives and differentiation techniques:Product rule, Chain rule & Quotient rule",
+      "Application of Newton's Method for Roots",
+      "Finding Maxima and Minima",
+      "Recognizing Symmetry and Curve Sketching techniques",
+    ],
+    MT102SC: [
+      "Integral Calculus Concepts: Anti-derivatives, Area, The definite integral, Indefinite integrals",
+      "The Fundamental Theorem of Calculus",
+      "Inverse Trigonometric Functions",
+      "Numerical Integration Methods: Trapezoidal Rule Simpson's Rule",
+      "Applications of Integration: Volumes and surfaces of revolution Length of a curve",
+    ],
+    MT113SC: [
+      "Understanding of vector spaces and subspaces",
+      "Mastery of matrix operations (addition, multiplication, inversion)",
+      "Solving systems of linear equations using Gaussian elimination",
+      "Applications of determinants and their properties",
+      "Linear transformations and their representations",
+      "Applications of linear algebra in engineering, physics, and computer science",
+    ],
+    
+  };
+
+  return (
+    <div className="analytics-container">
+      <h2>CSSE Foundational Modules and their Real-world Impact</h2>
+      <p>
+        Explore how fundamental CS topics evolve into key industry applications
+        and research advancements.
+      </p>
+
+      <label htmlFor="moduleSelect">Choose a first-year module:</label>
+      <select
+        id="moduleSelect"
+        value={selectedModule}
+        onChange={(e) => setSelectedModule(e.target.value)}
+      >
+        {Object.keys(moduleData).map((module) => (
+          <option key={module} value={module}>
+            {module}
+          </option>
+        ))}
+      </select>
+
+      <table className="analytics-table">
+        <thead>
+          <tr>
+            <th>Related Advanced Modules</th>
+            <th>Application in Industry/Research</th>
+          </tr>
+        </thead>
+        <tbody>
+          {moduleData[selectedModule].map((item) => (
+            <tr key={item.code}>
+              <td>{item.code}</td>
+              <td>{item.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Skills Acquired Section */}
+      <div className="skills-section">
+        <h3>Key Skills Acquired</h3>
+        <ul>
+          {skills[selectedModule].map((skill, index) => (
+            <li key={index}>✅ {skill}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Analytics;

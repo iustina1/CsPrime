@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+import "./Home.css";
+import HOME from "../Assets/HOME.png";
+import Modules from '../Modules/Modules'; // Import Modules component
+
+const Home = () => {
+  const [showModules, setShowModules] = useState(false); // State to toggle pages
+
+  if (showModules) {
+    return <Modules />; // Show Modules page when button is clicked
+  }
+
+  return (
+    <div className="home-container">
+      <div className="image-container">
+        <div className="image-box">
+          <img src={HOME} alt="CSPRIME Background" className="hero-image" />
+        </div>
+        <div className="text-container">
+          <p className="hero-text">Welcome to CSPRIME</p>
+          <p className="subtext">
+            Your gateway to mastering Computer Science, from fundamentals to advanced topics.
+          </p>
+          <button className="cta-button" onClick={() => setShowModules(true)}>
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
