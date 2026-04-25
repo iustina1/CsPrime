@@ -34,7 +34,16 @@ routes/ – API routes
 controllers/ – Business logic
 models/ – Database schemas (MongoDB)
 
-<img width="1366" height="768" alt="Screenshot (29)" src="https://github.com/user-attachments/assets/ebc6ebc9-26d0-4c82-905c-7005dd658407" />
+<img width="1128" height="566" alt="Screenshot (77)" src="https://github.com/user-attachments/assets/d6ccff96-25c5-48f9-9c88-b30743c0cb90" />
+
+<img width="1330" height="570" alt="Screenshot (81)" src="https://github.com/user-attachments/assets/3559ca2f-a56d-440e-9ff8-2e0413dd31d0" />
+
+
+<img width="1148" height="586" alt="Screenshot (74)" src="https://github.com/user-attachments/assets/de1ba98c-0968-46d3-bfd3-ae0ca6bc4a55" />
+
+
+
+
 
 
 
