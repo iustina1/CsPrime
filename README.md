@@ -34,6 +34,8 @@ routes/ – API routes
 controllers/ – Business logic
 models/ – Database schemas (MongoDB)
 
+To start program in terminal type in npm start, npm i, Cd csprime1. 
+
 <img width="1128" height="566" alt="Screenshot (77)" src="https://github.com/user-attachments/assets/d6ccff96-25c5-48f9-9c88-b30743c0cb90" />
 
 <img width="1330" height="570" alt="Screenshot (81)" src="https://github.com/user-attachments/assets/3559ca2f-a56d-440e-9ff8-2e0413dd31d0" />
